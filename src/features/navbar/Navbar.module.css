@@ -1,0 +1,26 @@
+.wrapper {
+    background: #FCFBFB;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-height: 100vh;
+    padding: 41px 115px 41px 63px;
+    z-index: -1;
+}
+
+.linkWrapper {
+    display: flex;
+
+}
+
+.link {
+    text-decoration: none;
+    color: #1A1718;
+    margin: 12px;
+}
+
+.blogsImg {
+    fill: #1A1718;
+    margin: auto;
+    padding: 12px;
+}
