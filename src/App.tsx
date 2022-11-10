@@ -11,8 +11,6 @@ import Navbar from "./features/navbar/Navbar";
 import Main from "./pages/main/Main";
 
 const App = () => {
-    const count = useSelector((state: RootState) => state.counter.value)
-    const dispatch = useDispatch()
     return (
         <div>
             <Header/>
