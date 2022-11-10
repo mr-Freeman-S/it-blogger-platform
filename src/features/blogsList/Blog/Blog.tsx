@@ -1,22 +1,21 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
-import {increment} from "../../blogsSlice";
-import {useAppDispatch} from "../../../app/hooks";
+import style from "./Blog.module.css"
+import {ReactComponent as Img} from "./../../../assets/icons/img.svg"
 
 type BlogPropsType = {
-    img: string
+    img?: string
     title: string
     description: string
 }
 
 const Blog = ({img, title, description}: BlogPropsType) => {
-    const dispatch = useAppDispatch()
     return (
-        <div>
-            <div>{img}</div>
-            <div>{title}</div>
-            <div>{description}</div>
-            <button  onClick={()=> dispatch(increment())}>+</button>
+        <div className={style.wrapper}>
+            <div className={style.imgWrapper}>{img || <Img className={style.img}/>}</div>
+            <div className={style.content}>
+                <h4 className={style.title}>{title}</h4>
+                <div className={style.description}>{description}</div>
+            </div>
         </div>
     );
 };
